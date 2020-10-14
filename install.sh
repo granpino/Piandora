@@ -54,8 +54,7 @@ EOF
 # create shortcut on desktop
 
 echo "Creating Desktop shortcut:"
-echo "======================" 
-echo ""
+echo
 touch Piandora.desktop
 cat <<EOF > Piandora.desktop
 
@@ -73,10 +72,17 @@ EOF
 
 sudo chmod +x Piandora.desktop
 sudo mv Piandora.desktop /home/pi/Desktop
+echo
+echo "Generate data.txt file"
+touch /home/pi/Piandora/data.txt
 
+cat <<EOF > /home/pi/Piandora/data.txt
+Artist | Album | play | 299
+
+EOF
+echo
 echo "Make files executible:"
-echo "======================"
-echo ""
+echo
 sudo chmod +x *
 echo
 echo "Starting to set up pianobar"
