@@ -39,7 +39,7 @@ act_voldown = (
 act_volup = )
 act_songinfo = i
 
-event_command = /home/pi/piandora/event.py
+event_command = /home/pi/Piandora/event.py
 volume = -10
 # Format strings
 format_nowplaying_song = SONG: %t | %a | %l
@@ -64,14 +64,14 @@ cat <<EOF > Piandora.desktop
 [Desktop Entry]
 Name=Piandora
 Type=Application
-Exec=lxterminal -t "Piandora" --working-directory=/home/pi/piandora/ -e ./run.sh
-Icon=/home/pi/piandora/icon.png
+Exec=lxterminal -t "Piandora" --working-directory=/home/pi/Piandora/ -e ./run.sh
+Icon=/home/pi/Piandora/icon.png
 Comment=test
 Terminal=true
 
 EOF
 
-sudo chmod +x piandora.desktop
+sudo chmod +x Piandora.desktop
 sudo mv piandora.desktop /home/pi/Desktop
 
 echo "Make files executible:"
