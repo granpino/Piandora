@@ -70,8 +70,8 @@ Terminal=true
 
 EOF
 
-sudo chmod +x Piandora.desktop
-sudo mv Piandora.desktop /home/pi/Desktop
+chmod +x Piandora.desktop
+mv Piandora.desktop /home/pi/Desktop
 echo
 echo "Generate data.txt file"
 touch /home/pi/Piandora/data.txt
