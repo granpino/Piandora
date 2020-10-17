@@ -8,6 +8,7 @@ cd Piandora
 chmod +x *.sh
 
 sudo ./install.sh
+
 Now open the config file and enter your Pandora credentials.
 
 sudo nano ~/.config/pianobar/config
