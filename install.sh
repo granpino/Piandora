@@ -85,6 +85,7 @@ echo "Make files executible:"
 echo
 sudo chmod +x *.py
 sudo chown pi:pi *.*
+sudo chown pi:pi /home/pi/.config/pianobar *.*
 echo
 echo "Starting to set up pianobar"
 fingerprint=`openssl s_client -connect tuner.pandora.com:443 < /dev/null 2> /dev/null | openssl x509 -noout -fingerprint | tr -d ':' | cut -d'=' -f2` && echo tls_fingerprint = $fingerprint >> ~/.config/pianobar/config
