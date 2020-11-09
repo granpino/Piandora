@@ -1,5 +1,6 @@
 # Piandora
 Raspberry pi GUI for pianobar, a client for Pandora using a touchscreen.
+file://icon.png
 ```
 git clone https://github.com/granpino/Piandora.git
 
