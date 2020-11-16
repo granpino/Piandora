@@ -25,8 +25,8 @@ touch /home/pi/.config/pianobar/config
 cat <<EOF > /home/pi/.config/pianobar/config
 # This is an example configuration file for pianobar
 # Change User credentials here..
-user = 
-password = 
+user =
+password =
 
 # Keybindings
 act_help = ?
@@ -86,8 +86,9 @@ echo
 sudo chmod +x *.py
 sudo chown pi:pi *.*
 sudo chown pi:pi /home/pi/.config/pianobar/*
+sudo chown pi:pi /home/pi/.config/pianobar
 echo
 echo "Starting to set up pianobar"
-fingerprint=`openssl s_client -connect tuner.pandora.com:443 < /dev/null 2> /dev/null | openssl x509 -noout -fingerprint | tr -d ':' | cut -d'=' -f2` && echo tls_fingerprint = $fingerprint >> ~/.config/pianobar/config
+fingerprint=`openssl s_client -connect tuner.pandora.com:443 < /dev/null 2> /dev/null | openssl x509 -noout -fingerprint | tr -d ':' | cut -d'=' -f2` && echo tls_fingerprint = $fingerprint >> home/pi/.config/pianobar/config
 echo
 echo "Complete.."
