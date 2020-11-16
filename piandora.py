@@ -5,7 +5,7 @@
 # Tested with the Raspberry pi 2 and raspbian stretch
 # The program must be run within the Lxterminal.
 # copyright (C) Granpino
-# Rev1.0 by Granpino
+# Rev1.01 by Granpino
 
 import sys, pygame
 from pygame.locals import *
@@ -32,7 +32,7 @@ silver = 192, 192, 192
 gray = 40, 40, 40
 
 #other
-
+time.sleep(2) # wait for pianobar to load
 clock = pygame.time.Clock()
 subprocess.call("echo  's0' > /home/pi/.config/pianobar/ctl", shell=True)
 play = True
@@ -407,7 +407,7 @@ def main():
             if event.type == KEYDOWN:
                 if event.key == K_ESCAPE: # ESC key will kill it
                     sys.exit()
-        clock.tick(10) # refresh 
+        clock.tick(3) # refresh screen  
         refresh_menu_screen()
 
 refresh_menu_screen() 
